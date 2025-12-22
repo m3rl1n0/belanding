@@ -10,24 +10,24 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
   return (
     <header className="relative w-full min-h-[75vh] flex flex-col bg-white text-black border-b border-black/10">
       <div className="flex flex-1 w-full h-full">
-        {/* Left Column (30%) */}
-        <div className="hidden md:flex flex-col w-[30%] border-r border-black/10 relative z-20 bg-white overflow-hidden">
+        {/* Left Column - Text takes priority */}
+        <div className="hidden md:flex flex-col md:w-[50%] lg:w-[45%] xl:w-[42%] border-r border-black/10 relative z-20 bg-white overflow-hidden">
           <div className="p-8 border-b border-black/10">
             <div className="w-24 md:w-36">
               <Logo className="w-full text-black" />
             </div>
           </div>
 
-          <div className="flex-1 flex flex-col justify-center px-8 relative overflow-hidden">
+          <div className="flex-1 flex flex-col justify-center px-6 md:px-8 lg:px-10 relative overflow-hidden">
              <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="w-full"
             >
-               <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-5xl lg:text-6xl xl:text-7xl leading-[0.9] font-light tracking-tight break-words">
+               <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-[0.9] font-light tracking-tight">
                  {evolutionText.split('\n').map((line, i) => (
-                   <span key={i} className="block">{line}</span>
+                   <span key={i} className="block break-keep hyphens-none">{line}</span>
                  ))}
                </h1>
             </motion.div>
@@ -40,9 +40,9 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
              <div className="w-24 mb-12">
                 <Logo className="w-full text-black" />
               </div>
-              <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-6xl leading-[0.9] font-light tracking-tight mb-8 break-words">
+              <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-7xl leading-[0.9] font-light tracking-tight mb-8">
                  {evolutionText.split('\n').map((line, i) => (
-                   <span key={i} className="block">{line}</span>
+                   <span key={i} className="block break-keep hyphens-none">{line}</span>
                  ))}
                </h1>
            </div>
@@ -61,8 +61,8 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
            </div>
         </div>
 
-        {/* Right Column (70%) - Video Container */}
-        <div className="hidden md:flex flex-col w-[70%] relative bg-white overflow-hidden z-10">
+        {/* Right Column - Video adapts to remaining space */}
+        <div className="hidden md:flex flex-col md:w-[50%] lg:w-[55%] xl:w-[58%] relative bg-white overflow-hidden z-10">
            <div className="w-full h-full relative">
               {/* Video Element */}
               <video
