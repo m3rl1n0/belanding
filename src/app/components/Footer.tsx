@@ -1,4 +1,5 @@
 import { Linkedin } from "lucide-react";
+import { Logo } from "./Logo";
 
 interface FooterProps {
   links: {
@@ -15,18 +16,12 @@ export const Footer = ({ links }: FooterProps) => {
         
         {/* Left Column (30%) - Branding / Copyright */}
         <div className="w-full md:w-[30%] border-r border-black/10 p-8 md:p-12 flex flex-col justify-between min-h-[300px]">
-           <div>
-              <h2 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-4xl font-light tracking-tight mb-2">
-                Be
-              </h2>
-              <p className="font-['Inter_Tight',sans-serif] text-sm uppercase tracking-widest opacity-50">
-                Shaping the Future
-              </p>
+           <div className="w-40">
+              <Logo className="w-full" />
            </div>
-           
-           <div className="mt-12 md:mt-0 flex flex-col gap-1 text-xs uppercase tracking-widest opacity-40 font-['Inter_Tight',sans-serif]">
-              <span>© {new Date().getFullYear()} Be Group</span>
-              <span>All rights reserved</span>
+
+           <div className="mt-12 md:mt-0 text-xs uppercase tracking-widest opacity-40 font-['Inter_Tight',sans-serif]">
+              <span>© {new Date().getFullYear()} All rights reserved</span>
            </div>
         </div>
 

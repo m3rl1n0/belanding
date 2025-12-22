@@ -46,7 +46,7 @@ export const Section = ({ id, text, index, theme }: SectionProps) => {
            {/* Mobile Line */}
            <div className={clsx("absolute bottom-0 left-0 w-full h-px md:hidden", isDark ? "bg-white/20" : "bg-black/20")} />
 
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
