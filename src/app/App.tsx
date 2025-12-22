@@ -6,7 +6,7 @@ import { Menu } from "./components/Menu";
 import { content } from "./data/content";
 
 export default function App() {
-  const [lang, setLang] = useState<'it' | 'en'>('it');
+  const [lang, setLang] = useState<'it' | 'en'>('en');
   const t = content[lang];
 
   return (
