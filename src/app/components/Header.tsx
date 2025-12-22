@@ -19,18 +19,37 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
           </div>
 
           <div className="flex-1 flex flex-col justify-center px-6 md:px-8 lg:px-10 relative overflow-hidden">
-             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="w-full"
-            >
-               <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-[0.9] font-light tracking-tight">
-                 {evolutionText.split('\n').map((line, i) => (
-                   <span key={i} className="block break-keep hyphens-none">{line}</span>
-                 ))}
-               </h1>
-            </motion.div>
+             <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-[0.9] font-light tracking-tight w-full">
+               {evolutionText.split('\n').map((line, lineIndex) => (
+                 <span key={lineIndex} className="block">
+                   {line.split(' ').map((word, wordIndex) => {
+                     const totalWordIndex = lineIndex * 3 + wordIndex;
+
+                     return (
+                       <motion.span
+                         key={wordIndex}
+                         className="inline-block mr-[0.15em] break-keep hyphens-none"
+                         initial={{
+                           opacity: 0,
+                           y: 30
+                         }}
+                         animate={{
+                           opacity: 1,
+                           y: 0
+                         }}
+                         transition={{
+                           duration: 0.5,
+                           delay: totalWordIndex * 0.03, // 30ms stagger
+                           ease: [0.25, 0.1, 0.25, 1]
+                         }}
+                       >
+                         {word}
+                       </motion.span>
+                     );
+                   })}
+                 </span>
+               ))}
+             </h1>
           </div>
         </div>
 
@@ -41,10 +60,36 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
                 <Logo className="w-full text-black" />
               </div>
               <h1 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-7xl leading-[0.9] font-light tracking-tight mb-8">
-                 {evolutionText.split('\n').map((line, i) => (
-                   <span key={i} className="block break-keep hyphens-none">{line}</span>
-                 ))}
-               </h1>
+                {evolutionText.split('\n').map((line, lineIndex) => (
+                  <span key={lineIndex} className="block">
+                    {line.split(' ').map((word, wordIndex) => {
+                      const totalWordIndex = lineIndex * 3 + wordIndex;
+
+                      return (
+                        <motion.span
+                          key={wordIndex}
+                          className="inline-block mr-[0.15em] break-keep hyphens-none"
+                          initial={{
+                            opacity: 0,
+                            y: 30
+                          }}
+                          animate={{
+                            opacity: 1,
+                            y: 0
+                          }}
+                          transition={{
+                            duration: 0.5,
+                            delay: totalWordIndex * 0.03,
+                            ease: [0.25, 0.1, 0.25, 1]
+                          }}
+                        >
+                          {word}
+                        </motion.span>
+                      );
+                    })}
+                  </span>
+                ))}
+              </h1>
            </div>
 
            {/* Mobile Video */}
