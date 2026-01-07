@@ -11,6 +11,10 @@ export type Content = {
     investors: string;
     whistleblowing: string;
     privacy: string;
+    careers: {
+      text: string;
+      url: string;
+    };
   };
 };
 
@@ -46,6 +50,10 @@ export const content: Record<'it' | 'en', Content> = {
       investors: "Archivio investitori",
       whistleblowing: "Procedura segnalazioni anche anonime",
       privacy: "Privacy Policy",
+      careers: {
+        text: "Careers",
+        url: "https://www.be-tse.it/it/careers/"
+      },
     },
   },
   en: {
@@ -79,6 +87,10 @@ export const content: Record<'it' | 'en', Content> = {
       investors: "Investor Archive",
       whistleblowing: "Whistleblowing Procedure",
       privacy: "Privacy Policy",
+      careers: {
+        text: "Careers",
+        url: "https://www.be-tse.it/careers/"
+      },
     },
   },
 };

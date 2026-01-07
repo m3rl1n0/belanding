@@ -6,6 +6,10 @@ interface FooterProps {
     investors: string;
     whistleblowing: string;
     privacy: string;
+    careers: {
+      text: string;
+      url: string;
+    };
   };
 }
 
@@ -30,9 +34,9 @@ export const Footer = ({ links }: FooterProps) => {
            
            {/* Big CTA / Title */}
            <div className="mb-16">
-             <h2 className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-5xl md:text-7xl font-light tracking-tight">
-                Shaping the Future
-             </h2>
+             <a href={links.careers.url} target="_blank" rel="noopener noreferrer" className="font-['Ivy_Presto_Display','Playfair_Display',serif] text-5xl md:text-7xl font-light tracking-tight hover:opacity-50 transition-opacity inline-block">
+                {links.careers.text}
+             </a>
            </div>
 
            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
