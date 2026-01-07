@@ -3,9 +3,18 @@ import { Logo } from "./Logo";
 
 interface FooterProps {
   links: {
-    investors: string;
-    whistleblowing: string;
-    privacy: string;
+    investors: {
+      text: string;
+      url: string;
+    };
+    whistleblowing: {
+      text: string;
+      url: string;
+    };
+    privacy: {
+      text: string;
+      url: string;
+    };
     careers: {
       text: string;
       url: string;
@@ -45,14 +54,14 @@ export const Footer = ({ links }: FooterProps) => {
                 <a href={links.careers.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
                   {links.careers.text}
                 </a>
-                <a href="https://www.be-tse.it/it/investors/" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
-                  {links.investors}
+                <a href={links.investors.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+                  {links.investors.text}
                 </a>
-                <a href="https://www.be-tse.it/wp-content/uploads/2024/11/Procedura-Gestione-Segnalazioni-anche-anonime-Whistleblowing.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
-                  {links.whistleblowing}
+                <a href={links.whistleblowing.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+                  {links.whistleblowing.text}
                 </a>
-                <a href="https://www.be-tse.it/wp-content/uploads/2016/01/Privacy-Policy-del-sito-web-di-Be.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
-                  {links.privacy}
+                <a href={links.privacy.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+                  {links.privacy.text}
                 </a>
               </div>
 

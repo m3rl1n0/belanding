@@ -101,7 +101,7 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               >
-                <source src="/be_shaping_morph.mp4" type="video/mp4" />
+                <source src="/assets/be_shaping_morph.mp4" type="video/mp4" />
               </video>
            </div>
         </div>
@@ -117,7 +117,7 @@ export const Header = ({ evolutionText, payoffText }: HeaderProps) => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               >
-                <source src="/be_shaping_morph.mp4" type="video/mp4" />
+                <source src="/assets/be_shaping_morph.mp4" type="video/mp4" />
               </video>
            </div>
         </div>

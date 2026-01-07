@@ -8,9 +8,18 @@ export type Content = {
     text: string;
   }[];
   footer: {
-    investors: string;
-    whistleblowing: string;
-    privacy: string;
+    investors: {
+      text: string;
+      url: string;
+    };
+    whistleblowing: {
+      text: string;
+      url: string;
+    };
+    privacy: {
+      text: string;
+      url: string;
+    };
     careers: {
       text: string;
       url: string;
@@ -47,12 +56,21 @@ export const content: Record<'it' | 'en', Content> = {
       },
     ],
     footer: {
-      investors: "Archivio investitori",
-      whistleblowing: "Procedura segnalazioni anche anonime",
-      privacy: "Privacy Policy",
       careers: {
         text: "Careers",
-        url: "https://www.be-tse.it/it/careers/"
+        url: "/it/careers/"
+      },
+      investors: {
+        text: "Archivio investitori",
+        url: "/it/investors/"
+      },
+      whistleblowing: {
+        text: "Procedura segnalazioni anche anonime",
+        url: "/wp-content/uploads/2024/11/Procedura-Gestione-Segnalazioni-anche-anonime-Whistleblowing.pdf"
+      },
+      privacy: {
+        text: "Privacy Policy",
+        url: "/wp-content/uploads/2016/01/Privacy-Policy-del-sito-web-di-Be.pdf"
       },
     },
   },
@@ -84,12 +102,21 @@ export const content: Record<'it' | 'en', Content> = {
       },
     ],
     footer: {
-      investors: "Investor Archive",
-      whistleblowing: "Whistleblowing Procedure",
-      privacy: "Privacy Policy",
       careers: {
         text: "Careers",
-        url: "https://www.be-tse.it/careers/"
+        url: "/careers/"
+      },
+      investors: {
+        text: "Investor Archive",
+        url: "/investors/"
+      },
+      whistleblowing: {
+        text: "Whistleblowing Procedure",
+        url: "/wp-content/uploads/2024/11/Procedura-Gestione-Segnalazioni-anche-anonime-Whistleblowing.pdf"
+      },
+      privacy: {
+        text: "Privacy Policy",
+        url: "/wp-content/uploads/2016/01/Website_Privacy_Policy_ENG.pdf"
       },
     },
   },
