@@ -7,6 +7,10 @@ interface FooterProps {
       text: string;
       url: string;
     };
+    ethicsCode: {
+      text: string;
+      url: string;
+    };
     whistleblowing: {
       text: string;
       url: string;
@@ -56,6 +60,9 @@ export const Footer = ({ links }: FooterProps) => {
                 </a>
                 <a href={links.investors.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
                   {links.investors.text}
+                </a>
+                <a href={links.ethicsCode.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+                  {links.ethicsCode.text}
                 </a>
                 <a href={links.whistleblowing.url} target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
                   {links.whistleblowing.text}

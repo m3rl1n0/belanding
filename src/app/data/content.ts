@@ -12,6 +12,10 @@ export type Content = {
       text: string;
       url: string;
     };
+    ethicsCode: {
+      text: string;
+      url: string;
+    };
     whistleblowing: {
       text: string;
       url: string;
@@ -64,6 +68,10 @@ export const content: Record<'it' | 'en', Content> = {
         text: "Archivio investitori",
         url: "/it/investors/"
       },
+      ethicsCode: {
+        text: "Codice etico",
+        url: "/wp-content/uploads/Codice_Etico_Be_STF_MC.pdf"
+      },
       whistleblowing: {
         text: "Procedura segnalazioni anche anonime",
         url: "/wp-content/uploads/2024/11/Procedura-Gestione-Segnalazioni-anche-anonime-Whistleblowing.pdf"
@@ -109,6 +117,10 @@ export const content: Record<'it' | 'en', Content> = {
       investors: {
         text: "Investor Archive",
         url: "/investors/"
+      },
+      ethicsCode: {
+        text: "Code of Ethics",
+        url: "/wp-content/uploads/Codice_Etico_Be_STF_MC.pdf"
       },
       whistleblowing: {
         text: "Whistleblowing Procedure",
